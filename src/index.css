@@ -1,76 +1,83 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --primary-font: "Inter", sans-serif;
+}
 
-  --primary-font: 'Raleway', sans-serif;
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif !important;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* removes scrollbar */
 ::-webkit-scrollbar {
-	width: 0px;
+  width: 0px;
 }
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	background: '#fff';
-	font-family: var(--primary-font);
-	overflow-x: hidden;
-	overflow-y: scroll;
+  background: "#fff";
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-input, textarea {
-	outline: none;
+input,
+textarea {
+  outline: none;
 }
 
 input:-webkit-autofill {
-	transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-input[type='search']::-webkit-search-cancel-button {
-	display: none;
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
 }
 
-input[type='file']::-webkit-file-upload-button {
-	display: none;
+input[type="file"]::-webkit-file-upload-button {
+  display: none;
 }
 
 /* input:number reset */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
-input[type='number'] {
-	-moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /* removes ms edge password reveal icon */
 ::-ms-reveal {
-	display: none;
+  display: none;
 }
 
 .button {
-	@apply active:scale-[0.98];
+  @apply active:scale-[0.98];
 }
 
 .chevron-clip {
-	clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+  clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
 }
