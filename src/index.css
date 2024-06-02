@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +14,7 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 
-  --primary-font: 'Raleway', sans-serif;
+  --primary-font: 'Inter', sans-serif;
 }
 
 /* removes scrollbar */
@@ -32,6 +34,11 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
+
+.custom-placeholder::placeholder{
+	@apply font-thin text-[#DAE0E6]
+  }
+
 
 input, textarea {
 	outline: none;
