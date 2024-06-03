@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import React from "react";
 import { AuthNavbar } from "../../components";
-import { google } from "../../assets/img";
+import { ReactComponent as Google } from "../../assets/img/google.svg";
 import { Link } from "react-router-dom";
 import { signupValidation } from "../../utils/schema";
 import { SignupDto } from "../../interfaces";
@@ -50,7 +50,10 @@ const Signup: React.FC = () => {
               <Form>
                 <div className="flex flex-col justify-center text-start gap-4">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] text-sm font-medium">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] text-sm font-medium"
+                    >
                       Full Name
                     </label>
                     <Field
@@ -66,7 +69,10 @@ const Signup: React.FC = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] font-medium text-sm">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] font-medium text-sm"
+                    >
                       Email
                     </label>
                     <Field
@@ -82,7 +88,10 @@ const Signup: React.FC = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] font-medium text-sm">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] font-medium text-sm"
+                    >
                       Password
                     </label>
                     <Field
@@ -98,7 +107,10 @@ const Signup: React.FC = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] text-sm font-medium">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] text-sm font-medium"
+                    >
                       Confirm Password
                     </label>
                     <Field
@@ -126,7 +138,7 @@ const Signup: React.FC = () => {
                       type="submit"
                       className="flex flex-row w-[400px] items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
                     >
-                      <img src={google} />
+                      <Google />
                       Continue with Google
                     </button>
                   </div>
