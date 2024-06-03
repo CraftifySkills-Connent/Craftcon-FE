@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as CraftconLogo } from "../../assets/images/craftcon.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomButton from "../button";
 
 const navItems = [
@@ -11,6 +11,7 @@ const navItems = [
 ];
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-between px-[88px] py-[20px] w-full">
       <CraftconLogo />
@@ -26,12 +27,12 @@ const Navbar: React.FC = () => {
       <div className="flex items-center gap-[21px]">
         <CustomButton
           variant="outlined"
-          onClick={() => console.log("login")}
+          onClick={() => navigate("/login")}
           buttonText="Sign in"
         />
         <CustomButton
           variant="contained"
-          onClick={() => console.log("signup")}
+          onClick={() => navigate("/signup")}
           disableElevation
           buttonText="Sign up"
         />
