@@ -11,18 +11,18 @@ const navItems = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="relative mt-[86px] px-[88px] bg-light pt-[50px] pb-[50px]">
-      <div className="grid items-center justify-center pb-[123px]">
+    <div className="relative mt-[20px] md:mt-[50px] lg:mt-[86px] px-[20px] md:px-[50px] lg:px-[88px] bg-light pt-[20px] md:pt-[30px] lg:pt-[50px] pb-[20px] md:pb-[30px] lg:pb-[50px]">
+      <div className="grid items-center justify-center pb-[50px] md:pb-[80px] lg:pb-[123px]">
         <div className="flex justify-center">
-          <CraftconLogo className="mb-[20px]" />
+          <CraftconLogo className="mb-[10px] md:mb-[15px] lg:mb-[20px]" />
         </div>
-        <h5 className="font-semibold text-[24px] leading-[31.5px] max-w-[597px] text-secondary text-center mt-[20px]">
+        <h5 className="font-semibold text-[18px] md:text-[22px] lg:text-[24px] leading-[24px] md:leading-[28px] lg:leading-[31.5px] max-w-[100%] md:max-w-[80%] lg:max-w-[597px] text-secondary text-center mt-[10px] md:mt-[15px] lg:mt-[20px]">
           Get top rated service providers give you a solution to your problems
         </h5>
       </div>
-      <div className="flex justify-center items-center gap-[50px]">
+      <div className="flex flex-col items-center md:flex-row md:justify-center md:items-center gap-[10px] md:gap-[30px] lg:gap-[50px]">
         {navItems?.map((item) => (
-          <div key={item?.title} className="">
+          <div key={item?.title}>
             <Link to={item?.link} className="text-gray">
               {item?.title}
             </Link>
