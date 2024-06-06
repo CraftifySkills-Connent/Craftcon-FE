@@ -41,14 +41,17 @@ const FAQ: React.FC = () => {
   return (
     <div className="flex items-center gap-[50px] pt-[71px]">
       <FaqImg />
-      <div className="flex flex-col w-[700px] gap-[18px]">
+      <div className="flex flex-col w-[700px] gap-[43px]">
         <div className="flex">
           <h5 className="font-bold text-[36px] text-secondary">FAQ</h5>
         </div>
         {faqItems.map((item, index) => (
-          <div key={index} className="border-b border-black">
+          <div
+            key={index}
+            className="border-b border-ashen pl-[32px] pr-[49px]"
+          >
             <div
-              className="flex justify-between items-center py-[10px] cursor-pointer"
+              className="flex justify-between items-center pt-[10px] pb-[28px] cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
               <p className="text-[24px] leading-[23px] text-tertiary font-normal">
@@ -61,7 +64,7 @@ const FAQ: React.FC = () => {
               )}
             </div>
             {openIndex === index && (
-              <p className="text-[16px] leading-[23px] text-tertiary font-normal py-[10px]">
+              <p className="text-[16px] leading-[23px] text-tertiary font-normal pt-0 pb-[28px]">
                 {item.answer}
               </p>
             )}
