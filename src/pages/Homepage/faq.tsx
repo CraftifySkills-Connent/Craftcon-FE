@@ -27,7 +27,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What if they don't serve me well?",
     answer:
-      "At CraftCon, customer satisfaction is our top priority. If you are not satisfied with the service provided, please contact our customer support team immediately. We will work to resolve the issue promptly, whether that means providing a refund, offering a discount on future services, or scheduling a follow-up visit to ensure the job is completed to your satisfaction. Your feedback is invaluable to us as we continually strive to improve our services and exceed your expectations.",
+      "At Craftcon, customer satisfaction is our top priority. If you are not satisfied with the service provided, please contact our customer support team immediately. We will work to resolve the issue promptly, whether that means providing a refund, offering a discount on future services, or scheduling a follow-up visit to ensure the job is completed to your satisfaction. Your feedback is invaluable to us as we continually strive to improve our services and exceed your expectations.",
   },
 ];
 
@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center gap-[50px] pt-[71px]">
+    <div className="flex items-center gap-[50px] pt-[71px] pb-[10px]">
       <FaqImg />
       <div className="flex flex-col w-[700px] gap-[43px]">
         <div className="flex">
