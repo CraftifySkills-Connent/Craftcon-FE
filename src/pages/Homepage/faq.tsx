@@ -48,13 +48,13 @@ const FAQ: React.FC = () => {
         {faqItems.map((item, index) => (
           <div
             key={index}
-            className="border-b border-ashen pl-[32px] pr-[49px]"
+            className="border-b-[1.4px] border-ashen border-solid pl-[32px] pr-[49px]"
           >
             <div
-              className="flex justify-between items-center pt-[10px] pb-[28px] cursor-pointer"
+              className="flex justify-between items-center pt-0 pb-[28px] cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
-              <p className="text-[24px] leading-[23px] text-tertiary font-normal">
+              <p className="font- text-[24px] leading-[23px] text-tertiary">
                 {item.question}
               </p>
               {openIndex === index ? (
