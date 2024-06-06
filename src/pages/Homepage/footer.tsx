@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[10px] bg-primary"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[10px] bg-default"></div>
     </div>
   );
 };

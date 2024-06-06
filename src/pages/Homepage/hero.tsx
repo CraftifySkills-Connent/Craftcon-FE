@@ -18,17 +18,19 @@ const Hero: React.FC = () => {
             and electricians to cleaners and handymen.
           </p>
         </Box>
-        <Box className="flex items-center gap-[21px]">
+        <Box className="flex items-center gap-[16px]">
           <CustomButton
             variant="contained"
             onClick={() => console.log("login")}
             buttonText="Get Started"
             disableElevation
+            className="w-[128px] h-[48px]"
           />
           <CustomButton
             variant="outlined"
             onClick={() => console.log("signup")}
             buttonText="Sign in"
+            className="w-[81px] h-[48px]"
           />
         </Box>
       </Box>
