@@ -1,6 +1,6 @@
 import React from "react";
 import CustomButton from "../../components/button";
-import { ReactComponent as SmallStar } from "../../assets/icons/big-star.svg";
+import { ReactComponent as BigStar } from "../../assets/icons/big-star.svg";
 import { ReactComponent as ContactImg } from "../../assets/images/contact-us.svg";
 
 const ContactUs: React.FC = () => {
@@ -12,7 +12,7 @@ const ContactUs: React.FC = () => {
             We are available for{" "}
             <span className="text-primary">24/7 emergency</span> service
           </h5>
-          <SmallStar />
+          <BigStar />
         </div>
         <p className="text-[18px] leading-[23px] text-tertiary font-normal">
           We bring reliable professionals right to your door. From plumbers and

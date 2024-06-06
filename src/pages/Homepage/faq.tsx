@@ -1,6 +1,4 @@
 import React from "react";
-import CustomButton from "../../components/button";
-import { ReactComponent as SmallStar } from "../../assets/icons/big-star.svg";
 import { ReactComponent as FaqImg } from "../../assets/images/faq.svg";
 
 const FAQ: React.FC = () => {
@@ -18,13 +16,6 @@ const FAQ: React.FC = () => {
           electricians to cleaners and handymen, our platform connects you with
           skilled professionals for all your home service needs.
         </p>
-        <div className="">
-          <CustomButton
-            variant="contained"
-            buttonText="Contact Us"
-            onClick={() => console.log("log")}
-          />
-        </div>
       </div>
     </div>
   );
