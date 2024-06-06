@@ -12,7 +12,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Who are we?",
     answer:
-      "We are CraftCon, top-rated professionals dedicated to providing reliable and quality services right to your doorstep. Our team includes experienced plumbers, electricians, cleaners, and handymen ready to assist you.",
+      "We are Craftcon, top-rated professionals dedicated to providing reliable and quality services right to your doorstep. Our team includes experienced plumbers, electricians, cleaners, and handymen ready to assist you.",
   },
   {
     question: "What kind of services can I get?",
@@ -25,9 +25,9 @@ const faqItems: FAQItem[] = [
       "All our professionals undergo a thorough background check and verification process to ensure they are reliable and trustworthy. Your safety and satisfaction are our top priorities.",
   },
   {
-    question: "Can I schedule services at my convenience?",
+    question: "What if they don't serve me well?",
     answer:
-      "Yes, you can schedule services at a time that is convenient for you. We strive to provide flexible and convenient service options to fit your busy lifestyle.",
+      "At CraftCon, customer satisfaction is our top priority. If you are not satisfied with the service provided, please contact our customer support team immediately. We will work to resolve the issue promptly, whether that means providing a refund, offering a discount on future services, or scheduling a follow-up visit to ensure the job is completed to your satisfaction. Your feedback is invaluable to us as we continually strive to improve our services and exceed your expectations.",
   },
 ];
 
