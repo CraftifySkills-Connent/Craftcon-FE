@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       <div className="flex items-center gap-[50px]">
         {navItems?.map((item) => (
           <div key={item?.title} className="">
-            <Link to={item?.link} className="text-gray">
+            <Link to={item?.link} className="text-gray hover:text-primary">
               {item?.title}
             </Link>
           </div>
