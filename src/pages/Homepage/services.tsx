@@ -7,6 +7,9 @@ import { ReactComponent as Electrical } from "../../assets/icons/electrical-serv
 import { ReactComponent as Laundry } from "../../assets/icons/laundry.svg";
 import { ReactComponent as Plumbing } from "../../assets/icons/plumbing.svg";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
 
 const servicesData = [
   {
@@ -49,6 +52,7 @@ const servicesData = [
         <div className="">
           <Button
             variant="outlined"
+            onClick={() => navigate("/signup")}
             sx={{
               border: "1.43px solid #FFFFFF",
               fontFamily: "Inter",
