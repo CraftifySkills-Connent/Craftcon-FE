@@ -13,7 +13,7 @@ const navItems = [
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center justify-between px-[88px] py-[20px] w-full">
+    <div className="fixed top-0 left-0 right-0 flex items-center justify-between px-[88px] py-[20px] w-full bg-white z-50">
       <CraftconLogo />
       <div className="flex items-center gap-[50px]">
         {navItems?.map((item) => (

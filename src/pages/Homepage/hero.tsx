@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 
 const Hero: React.FC = () => {
   return (
-    <Box className="flex py-[20px] items-center justify-center">
+    <Box className="flex pt-[97px] pb-[20px] items-center justify-center">
       <Box className="flex flex-col gap-[38px]">
         <Box className="flex flex-col gap-[15px] w-[580px]">
           <h1 className="text-primary font-bold leading-[63px] text-[48px] capitalize">
