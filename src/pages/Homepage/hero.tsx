@@ -1,9 +1,12 @@
 import React from "react";
 import { ReactComponent as HeroBanner } from "../../assets/images/banner.svg";
 import CustomButton from "../../components/button";
+import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <Box className="flex pt-[97px] pb-[20px] items-center justify-center">
       <Box className="flex flex-col gap-[38px]">
@@ -21,14 +24,14 @@ const Hero: React.FC = () => {
         <Box className="flex items-center gap-[16px]">
           <CustomButton
             variant="contained"
-            onClick={() => console.log("login")}
+            onClick={() => navigate("/signup")}
             buttonText="Get Started"
             disableElevation
             className="w-[128px] h-[48px]"
           />
           <CustomButton
             variant="outlined"
-            onClick={() => console.log("signup")}
+            onClick={() => navigate("/login")}
             buttonText="Sign in"
             className="w-[81px] h-[48px]"
           />
