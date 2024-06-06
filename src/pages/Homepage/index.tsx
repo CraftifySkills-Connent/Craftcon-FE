@@ -3,6 +3,7 @@ import { Navbar } from "../../components";
 import Hero from "./hero";
 import Services from "./services";
 import ContactUs from "./contact-us";
+import FAQ from "./faq";
 
 const Homepage: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage: React.FC = () => {
         <Hero />
         <Services />
         <ContactUs />
+        <FAQ />
       </div>
     </div>
   );
