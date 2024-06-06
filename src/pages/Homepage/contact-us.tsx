@@ -22,8 +22,10 @@ const ContactUs: React.FC = () => {
         <div className="">
           <CustomButton
             variant="contained"
-            buttonText="Contact Us"
             onClick={() => console.log("log")}
+            buttonText="Contact Us"
+            disableElevation
+            className="w-[128px] h-[48px]"
           />
         </div>
       </div>

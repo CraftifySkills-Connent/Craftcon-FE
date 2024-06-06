@@ -6,15 +6,23 @@ interface ButtonProps {
   onClick: () => void;
   buttonText: string;
   disableElevation?: boolean;
+  className?: string;
 }
 
 const CustomButton: React.FC<ButtonProps> = (props) => {
-  const { variant, onClick, buttonText, disableElevation = false } = props;
+  const {
+    variant,
+    onClick,
+    buttonText,
+    disableElevation = false,
+    className,
+  } = props;
   return (
     <StyledButton
       variant={variant}
       onClick={onClick}
       disableElevation={disableElevation}
+      className={className}
     >
       {buttonText}
     </StyledButton>

@@ -23,13 +23,13 @@ const Footer: React.FC = () => {
       <div className="flex flex-col items-center md:flex-row md:justify-center md:items-center gap-[10px] md:gap-[30px] lg:gap-[50px]">
         {navItems?.map((item) => (
           <div key={item?.title}>
-            <Link to={item?.link} className="text-gray">
+            <Link to={item?.link} className="text-gray hover:text-primary">
               {item?.title}
             </Link>
           </div>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[10px] bg-primary"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[10px] bg-default"></div>
     </div>
   );
 };
