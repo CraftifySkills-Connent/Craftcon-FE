@@ -20,7 +20,7 @@ const faqItems: FAQItem[] = [
       "We offer a wide range of services including plumbing, laundry, cleaning, AC repair, and electrical services. Our professionals are equipped to handle various household needs efficiently and effectively.",
   },
   {
-    question: "How do I know the professionals are trustworthy?",
+    question: "Are the professionals trustworthy?",
     answer:
       "All our professionals undergo a thorough background check and verification process to ensure they are reliable and trustworthy. Your safety and satisfaction are our top priorities.",
   },
@@ -54,7 +54,7 @@ const FAQ: React.FC = () => {
               className="flex justify-between items-center pt-0 pb-[28px] cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
-              <p className="font- text-[24px] leading-[23px] text-tertiary">
+              <p className="font-medium text-[24px] leading-[23px] text-tertiary">
                 {item.question}
               </p>
               {openIndex === index ? (
