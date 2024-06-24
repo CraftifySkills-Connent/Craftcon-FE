@@ -17,12 +17,12 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 pt-6 lg:pt-12 pb-4 lg:pb-6 px-4">
+    <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 pt-16 lg:pt-12 pb-4 lg:pb-6 px-4">
       <div className="hidden lg:block w-full lg:w-auto mb-6 lg:mb-0">
         <FaqImg className="w-full max-w-xs lg:max-w-none lg:w-auto" />
       </div>
       <div className="flex flex-col w-full lg:w-4/6 gap-10">
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex lg:justify-start">
           <h5 className="font-bold text-2xl lg:text-3xl text-secondary text-left">
             FAQ
           </h5>
