@@ -45,12 +45,12 @@ const Navbar: React.FC = () => {
       </div>
       <div className="md:hidden flex items-center relative z-50">
         <button onClick={toggleMenu} className="focus:outline-none">
-          <div className={`space-y-1.5 ${isMenuOpen ? "hidden" : ""}`}>
+          <div className={`space-y-1 ${isMenuOpen ? "hidden" : ""}`}>
             <span
               className={`block w-6 h-0.5 bg-black transition-transform duration-300`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-black transition-opacity duration-300`}
+              className={`block w-4 h-0.5 bg-black transition-opacity duration-300 ml-auto`}
             ></span>
             <span
               className={`block w-6 h-0.5 bg-black transition-transform duration-300`}
