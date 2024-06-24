@@ -9,13 +9,15 @@ import Footer from "./footer";
 const Homepage: React.FC = () => {
   return (
     <div className="">
+      {" "}
       <Navbar />
-      <div className="px-[88px]">
+      <main className="content container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-auto gap-4">
+        {" "}
         <Hero />
         <Services />
         <ContactUs />
         <FAQ />
-      </div>
+      </main>
       <Footer />
     </div>
   );
