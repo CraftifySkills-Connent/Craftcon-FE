@@ -2,6 +2,8 @@ import React from "react";
 import CustomButton from "../../components/button";
 import { ReactComponent as BigStar } from "../../assets/icons/big-star.svg";
 import { ReactComponent as ContactImg } from "../../assets/images/contact-us.svg";
+import { ReactComponent as ContactImgMobile } from "../../assets/images/contact-us-mobile.svg";
+import { Box } from "@mui/material";
 
 const ContactUs: React.FC = () => {
   return (
@@ -19,6 +21,9 @@ const ContactUs: React.FC = () => {
           electricians to cleaners and handymen, our platform connects you with
           skilled professionals for all your home service needs.
         </p>
+        <Box className="block md:hidden w-full md:w-auto">
+          <ContactImgMobile className="w-full" />
+        </Box>
         <div className="">
           <CustomButton
             variant="contained"
@@ -29,7 +34,9 @@ const ContactUs: React.FC = () => {
           />
         </div>
       </div>
-      <ContactImg className="w-full md:w-auto" />
+      <Box className="hidden md:block w-full md:w-auto">
+        <ContactImg className="w-full" />
+      </Box>
     </div>
   );
 };
