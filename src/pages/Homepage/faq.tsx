@@ -17,22 +17,26 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center gap-[50px] pt-[71px] pb-[10px]">
-      <FaqImg />
-      <div className="flex flex-col w-[700px] gap-[43px]">
-        <div className="flex">
-          <h5 className="font-bold text-[36px] text-secondary">FAQ</h5>
+    <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 pt-16 lg:pt-12 pb-4 lg:pb-6 px-4">
+      <div className="hidden lg:block w-full lg:w-auto mb-6 lg:mb-0">
+        <FaqImg className="w-full max-w-xs lg:max-w-none lg:w-auto" />
+      </div>
+      <div className="flex flex-col w-full lg:w-4/6 gap-10">
+        <div className="flex lg:justify-start">
+          <h5 className="font-bold text-2xl lg:text-3xl text-secondary text-left">
+            FAQ
+          </h5>
         </div>
         {faqItems.map((item: FAQItem, index: number) => (
           <div
             key={index}
-            className="border-b-[1.4px] border-ashen border-solid pl-[32px] pr-[49px]"
+            className="border-b border-ashen pl-4 lg:pl-8 pr-4 lg:pr-8"
           >
             <div
-              className="flex justify-between items-center pt-0 pb-[28px] cursor-pointer"
+              className="flex justify-between items-center pt-4 pb-4 cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
-              <p className="font-medium text-[24px] leading-[23px] text-tertiary">
+              <p className="font-medium text-lg lg:text-xl text-tertiary">
                 {item.question}
               </p>
               {openIndex === index ? (
@@ -42,7 +46,7 @@ const FAQ: React.FC = () => {
               )}
             </div>
             {openIndex === index && (
-              <p className="text-[16px] leading-[23px] text-tertiary font-normal pt-0 pb-[28px]">
+              <p className="text-sm lg:text-base text-tertiary font-normal pt-0 pb-4">
                 {item.answer}
               </p>
             )}

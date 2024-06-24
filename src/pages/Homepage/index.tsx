@@ -11,7 +11,7 @@ const Homepage: React.FC = () => {
     <div className="">
       {" "}
       <Navbar />
-      <main className="content container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-auto gap-4">
+      <main className="content container mx-auto lg:px-[88px] px-4 py-8 grid grid-cols-1 md:grid-cols-auto gap-4">
         {" "}
         <Hero />
         <Services />
