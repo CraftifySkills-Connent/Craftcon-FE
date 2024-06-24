@@ -14,6 +14,7 @@ const initialValues: LoginDto = {
   email: "",
   password: "",
 };
+
 const Login: React.FC = () => {
   const dispatch = useAppDispatch();
 
@@ -34,9 +35,11 @@ const Login: React.FC = () => {
           label="Sign up"
         />
       </AuthNavbar>
-      <div className="bg-white w-screen h-screen flex justify-center my-14">
-        <div className="w-[400px] h-full flex flex-col">
-          <p className="text-3xl font-semibold text-[#000000] my-5">Login</p>
+      <div className="bg-white w-screen h-screen flex justify-center items-center">
+        <div className="w-full max-w-md px-4 md:px-0">
+          <p className="text-3xl font-semibold text-[#000000] my-5 text-center md:text-left">
+            Login
+          </p>
           <Formik
             initialValues={initialValues}
             validationSchema={loginValidation}
@@ -47,13 +50,13 @@ const Login: React.FC = () => {
                 <div className="flex flex-col justify-center text-start gap-4">
                   <div className="flex flex-col gap-2">
                     <label
-                      htmlFor="name"
+                      htmlFor="email"
                       className="text-[#1C1C1C] font-medium text-sm"
                     >
                       Email
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="email"
                       name="email"
                       placeholder="Olivia@gmail.com"
@@ -66,16 +69,16 @@ const Login: React.FC = () => {
                   </div>
                   <div className="flex flex-col gap-2">
                     <label
-                      htmlFor="name"
+                      htmlFor="password"
                       className="text-[#1C1C1C] text-sm font-medium"
                     >
                       Password
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="password"
                       name="password"
-                      placeholder="8+ Charaters"
+                      placeholder="8+ Characters"
                     />
                     {errors.password && (
                       <span className="text-xs text-red-500">
@@ -89,15 +92,15 @@ const Login: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="flex text-center items-center justify-center font-semibold w-[400px] text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
+                      className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
                     >
                       Continue
                     </button>
                   </div>
                   <div>
                     <button
-                      type="submit"
-                      className="flex flex-row w-[400px] items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
+                      type="button"
+                      className="flex flex-row w-full items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
                     >
                       <Google />
                       Continue with Google
