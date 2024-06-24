@@ -25,7 +25,7 @@ const ContactUs: React.FC = () => {
             onClick={() => console.log("log")}
             buttonText="Contact Us"
             disableElevation
-            className="w-[128px] h-[48px]"
+            className="md:w-[128px] h-[48px] w-full"
           />
         </div>
       </div>
