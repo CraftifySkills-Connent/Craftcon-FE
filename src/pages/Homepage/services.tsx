@@ -9,71 +9,71 @@ import { ReactComponent as Plumbing } from "../../assets/icons/plumbing.svg";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
-
-const servicesData = [
-  {
-    id: 1,
-    icon: <Plumbing />,
-    title: "Plumbing services",
-    subtitle: "Book a professional plumber to help fix your home",
-  },
-  {
-    id: 2,
-    icon: <Laundry />,
-    title: "Laundry services",
-    subtitle: "Book a professional laundry service",
-  },
-  {
-    id: 3,
-    icon: <Cleaning />,
-    title: "Cleaning services",
-    subtitle: "Book a professional cleaning service",
-  },
-  {
-    id: 4,
-    icon: <Electrical />,
-    title: "Electrical services",
-    subtitle: "Book a professional electrician",
-  },
-  {
-    id: 5,
-    icon: <AcRepairs />,
-    title: "AC repairs services",
-    subtitle: "Book a professional AC repair service",
-  },
-  {
-    id: 6,
-    children: (
-      <div className="flex justify-center flex-col gap-[25px] px-[25px] py-[25px] max-w-[400px] h-[295px] shadow-service-box rounded-[10px] bg-[#016FED]">
-        <h6 className="text-[#F4F9FF] font-bold text-[24px] leading-[32px]">
-          Explore our services and solutions, Trusted service providers
-        </h6>
-        <div className="">
-          <Button
-            variant="outlined"
-            onClick={() => navigate("/signup")}
-            sx={{
-              border: "1.43px solid #FFFFFF",
-              fontFamily: "Inter",
-              padding: "8px 12px",
-              borderRadius: "8px",
-              color: "#FFFFFF",
-              textTransform: "capitalize",
-              ":hover": {
-                border: "1.43px solid #FFFFFF",
-              },
-            }}
-          >
-            Get Started
-          </Button>
-        </div>
-      </div>
-    ),
-  },
-];
-
 const Services: React.FC = () => {
+  const navigate = useNavigate();
+
+  const servicesData = [
+    {
+      id: 1,
+      icon: <Plumbing />,
+      title: "Plumbing services",
+      subtitle: "Book a professional plumber to help fix your home",
+    },
+    {
+      id: 2,
+      icon: <Laundry />,
+      title: "Laundry services",
+      subtitle: "Book a professional laundry service",
+    },
+    {
+      id: 3,
+      icon: <Cleaning />,
+      title: "Cleaning services",
+      subtitle: "Book a professional cleaning service",
+    },
+    {
+      id: 4,
+      icon: <Electrical />,
+      title: "Electrical services",
+      subtitle: "Book a professional electrician",
+    },
+    {
+      id: 5,
+      icon: <AcRepairs />,
+      title: "AC repairs services",
+      subtitle: "Book a professional AC repair service",
+    },
+    {
+      id: 6,
+      children: (
+        <div className="flex justify-center flex-col gap-[25px] px-[25px] py-[25px] max-w-[400px] h-[295px] shadow-service-box rounded-[10px] bg-[#016FED]">
+          <h6 className="text-[#F4F9FF] font-bold text-[24px] leading-[32px]">
+            Explore our services and solutions, Trusted service providers
+          </h6>
+          <div className="">
+            <Button
+              variant="outlined"
+              onClick={() => navigate("/signup")}
+              sx={{
+                border: "1.43px solid #FFFFFF",
+                fontFamily: "Inter",
+                padding: "8px 12px",
+                borderRadius: "8px",
+                color: "#FFFFFF",
+                textTransform: "capitalize",
+                ":hover": {
+                  border: "1.43px solid #FFFFFF",
+                },
+              }}
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <div>
       <div className="hidden md:block">
@@ -92,7 +92,7 @@ const Services: React.FC = () => {
         <SmallStar />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[46px] gap-x-[18px]">
-        {servicesData?.map(({ icon, title, subtitle, id, children }, index) => (
+        {servicesData.map(({ icon, title, subtitle, id, children }, index) => (
           <React.Fragment key={id}>
             {children ? (
               children
