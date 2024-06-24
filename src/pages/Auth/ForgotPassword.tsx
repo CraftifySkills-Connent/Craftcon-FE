@@ -18,8 +18,8 @@ const ForgotPassword: React.FC = () => {
 
   const handleSubmit = async (values: ForgotPasswordDto) => {
     try {
-      const response = await axios.post("/api/forgot-password", values); // Update with your actual API endpoint
-      dispatch(login(response.data)); // Assuming your login action updates the Redux state
+      const response = await axios.post("/api/forgot-password", values);
+      dispatch(login(response.data));
     } catch (error) {
       console.error("Error during forgot password:", error);
     }
