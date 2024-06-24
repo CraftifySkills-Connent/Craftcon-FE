@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
 
   return (
     <Box className="flex flex-col md:flex-row pt-24 pb-5 items-center justify-center">
-      <Box className="flex flex-col gap-10 md:mr-8 mb-8 md:mb-0 md:gap-10 w-full md:w-auto">
+      <Box className="flex flex-col gap-10 mb-8 md:mb-0 md:gap-10 w-full md:w-auto">
         <Box className="flex flex-col gap-4 w-full md:w-[580px]">
           <h1 className="text-primary font-bold leading-tight text-4xl md:text-5xl capitalize">
             top-rated professionals
@@ -22,7 +22,6 @@ const Hero: React.FC = () => {
             and electricians to cleaners and handymen.
           </p>
         </Box>
-        {/* Banner image for mobile screens */}
         <Box className="block md:hidden w-full md:w-auto">
           <HeroBannerMobile className="w-full" />
         </Box>
@@ -42,7 +41,6 @@ const Hero: React.FC = () => {
           />
         </Box>
       </Box>
-      {/* Banner image for desktop screens */}
       <Box className="hidden md:block w-full md:w-auto">
         <HeroBanner className="w-full" />
       </Box>
