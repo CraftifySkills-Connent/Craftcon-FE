@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
     <Box className="flex flex-col md:flex-row pt-24 pb-5 items-center justify-center">
       <Box className="flex flex-col gap-10 mb-8 md:mb-0 md:gap-10 w-full md:w-auto">
         <Box className="flex flex-col gap-4 w-full md:w-[580px]">
-          <h1 className="text-primary font-bold leading-tight text-4xl md:text-5xl capitalize">
+          <h1 className="text-primary font-bold leading-tight text-3xl md:text-5xl capitalize">
             top-rated professionals
             <br />
             <span className="text-secondary capitalize">At your doorstep.</span>
