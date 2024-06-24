@@ -16,13 +16,14 @@ const initialValues: SignupDto = {
   password: "",
   cpassword: "",
 };
+
 const Signup: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const handleSubmit = async (values: SignupDto) => {
     try {
-      const response = await axios.post("/api/signup", values); // Update with your actual API endpoint
-      dispatch(login(response.data)); // Assuming your login action updates the Redux state
+      const response = await axios.post("/api/signup", values);
+      dispatch(login(response.data));
     } catch (error) {
       console.error("Error during signup:", error);
     }
@@ -36,8 +37,8 @@ const Signup: React.FC = () => {
           label="Sign in"
         />
       </AuthNavbar>
-      <div className="bg-white w-screen h-screen flex justify-center my-14">
-        <div className="w-[400px] h-full flex flex-col">
+      <div className="bg-white w-screen h-screen flex justify-center my-20">
+        <div className="w-full max-w-md px-4 md:px-0">
           <p className="text-3xl font-semibold text-[#000000] my-5">
             Create Your Account
           </p>
@@ -57,7 +58,7 @@ const Signup: React.FC = () => {
                       Full Name
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 w-[400px] px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="text"
                       name="fullName"
                       placeholder="Olivia Emmanuell"
@@ -76,7 +77,7 @@ const Signup: React.FC = () => {
                       Email
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="email"
                       name="email"
                       placeholder="Olivia@gmail.com"
@@ -95,7 +96,7 @@ const Signup: React.FC = () => {
                       Password
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="password"
                       name="password"
                       placeholder="8+ Charaters"
@@ -114,7 +115,7 @@ const Signup: React.FC = () => {
                       Confirm Password
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder margin-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder margin-placeholder rounded-md"
                       type="password"
                       name="cpassword"
                       placeholder="8+ Charaters"
@@ -128,7 +129,7 @@ const Signup: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="flex text-center items-center justify-center font-semibold w-[400px] text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
+                      className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
                     >
                       Submit
                     </button>
@@ -136,7 +137,7 @@ const Signup: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="flex flex-row w-[400px] items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
+                      className="flex flex-row w-full items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
                     >
                       <Google />
                       Continue with Google

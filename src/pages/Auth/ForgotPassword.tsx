@@ -12,13 +12,14 @@ import { Button } from "../../components";
 const initialValues: ForgotPasswordDto = {
   email: "",
 };
+
 const ForgotPassword: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const handleSubmit = async (values: ForgotPasswordDto) => {
     try {
-      const response = await axios.post("/api/signup", values); // Update with your actual API endpoint
-      dispatch(login(response.data)); // Assuming your login action updates the Redux state
+      const response = await axios.post("/api/forgot-password", values);
+      dispatch(login(response.data));
     } catch (error) {
       console.error("Error during forgot password:", error);
     }
@@ -32,12 +33,15 @@ const ForgotPassword: React.FC = () => {
           label="Sign up"
         />
       </AuthNavbar>
-      <div className="bg-white w-screen h-screen flex justify-center my-14">
-        <div className="w-[400px] h-full flex flex-col">
+      <div className="bg-white w-screen h-screen flex justify-center my-20">
+        <div className="w-full max-w-md px-4 md:px-0">
           <p className="text-3xl font-semibold text-[#000000] my-5">
-          Forgot Password?
+            Forgot Password?
           </p>
-          <p className="text-[14.43px] font-normal text-[#667085]">Enter the email address you used when you joined and<br/> we’ll send you instructions to reset your password.</p>
+          <p className="text-[14.43px] font-normal text-[#667085]">
+            Enter the email address you used when you joined and
+            <br /> we’ll send you instructions to reset your password.
+          </p>
           <Formik
             initialValues={initialValues}
             validationSchema={forgotPasswordValidation}
@@ -47,11 +51,14 @@ const ForgotPassword: React.FC = () => {
               <Form>
                 <div className="flex flex-col justify-center text-start gap-4 mt-10">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] text-sm font-medium">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] text-sm font-medium"
+                    >
                       Email
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-1 outline-gray-200 px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="email"
                       name="email"
                       placeholder="Olivia@gmail.com"
@@ -65,7 +72,7 @@ const ForgotPassword: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="flex text-center items-center justify-center font-semibold w-[400px] text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
+                      className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
                     >
                       Reset password
                     </button>
