@@ -22,8 +22,8 @@ const Signup: React.FC = () => {
 
   const handleSubmit = async (values: SignupDto) => {
     try {
-      const response = await axios.post("/api/signup", values); // Update with your actual API endpoint
-      dispatch(login(response.data)); // Assuming your login action updates the Redux state
+      const response = await axios.post("/api/signup", values);
+      dispatch(login(response.data));
     } catch (error) {
       console.error("Error during signup:", error);
     }
