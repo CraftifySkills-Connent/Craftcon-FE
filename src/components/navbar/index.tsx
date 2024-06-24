@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item?.title}
                   to={item?.link}
-                  className="text-gray-700 hover:text-primary text-xl py-4"
+                  className="text-gray-700 hover:text-primary text-xl py-3"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item?.title}
