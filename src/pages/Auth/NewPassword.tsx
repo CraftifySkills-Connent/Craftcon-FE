@@ -18,7 +18,7 @@ const NewPassword: React.FC = () => {
 
   const handleSubmit = async (values: NewPasswordDto) => {
     try {
-      const response = await axios.post("/api/signup", values); // Update with your actual API endpoint
+      const response = await axios.post("/api/signup", values);
       dispatch(login(response.data)); // Assuming your login action updates the Redux state
     } catch (error) {
       console.error("Error during new password:", error);
@@ -46,9 +46,12 @@ const NewPassword: React.FC = () => {
             {({ errors }) => (
               <Form>
                 <div className="flex flex-col justify-center text-start gap-4">
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] text-sm font-medium">
-                     New Password
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] text-sm font-medium"
+                    >
+                      New Password
                     </label>
                     <Field
                       className="outline outline-1 outline-gray-200 px-4 w-[400px] h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
@@ -63,7 +66,10 @@ const NewPassword: React.FC = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[#1C1C1C] font-medium text-sm">
+                    <label
+                      htmlFor="name"
+                      className="text-[#1C1C1C] font-medium text-sm"
+                    >
                       Confirm Password
                     </label>
                     <Field
