@@ -1,13 +1,14 @@
-import { Formik, Form, Field } from "formik";
 import React from "react";
-import { AuthNavbar } from "../../components";
+import { Formik, Form, Field } from "formik";
 import { Link } from "react-router-dom";
+
+import { AuthNavbar, Button } from "../../components";
 import { forgotPasswordValidation } from "../../utils/schema";
 import { ForgotPasswordDto } from "../../interfaces";
 import { useAppDispatch } from "../../hooks";
-import axios from "axios";
 import { login } from "../../redux/slices/userSlice";
-import { Button } from "../../components";
+
+import axios from "axios";
 
 const initialValues: ForgotPasswordDto = {
   email: "",

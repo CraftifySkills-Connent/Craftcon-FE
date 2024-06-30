@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ReactComponent as BigStar } from "../../assets/icons/big-star.svg";
 import { ReactComponent as SmallStar } from "../../assets/icons/small-star.svg";
 import { ReactComponent as AcRepairs } from "../../assets/icons/ac-repairs.svg";
@@ -6,7 +7,9 @@ import { ReactComponent as Cleaning } from "../../assets/icons/cleaning.svg";
 import { ReactComponent as Electrical } from "../../assets/icons/electrical-services.svg";
 import { ReactComponent as Laundry } from "../../assets/icons/laundry.svg";
 import { ReactComponent as Plumbing } from "../../assets/icons/plumbing.svg";
+
 import { Button } from "@mui/material";
+
 import { useNavigate } from "react-router-dom";
 
 const Services: React.FC = () => {

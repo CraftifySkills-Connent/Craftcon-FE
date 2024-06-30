@@ -1,10 +1,11 @@
 import React from "react";
+
 import { Navbar } from "../../components";
 import Hero from "./hero";
 import Services from "./services";
 import ContactUs from "./contact-us";
 import FAQ from "./faq";
-import Footer from "./footer";
+import Footer from "../../components/footer";
 
 const Homepage: React.FC = () => {
   return (

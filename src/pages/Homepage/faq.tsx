@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import { ReactComponent as FaqImg } from "../../assets/images/faq.svg";
 import { ReactComponent as ArrowUp } from "../../assets/icons/arrow-up.svg";
 import { ReactComponent as ArrowDown } from "../../assets/icons/arrow-down.svg";
+
 import faqItems from "../../constants/content/faqItems.json";
 
 interface FAQItem {

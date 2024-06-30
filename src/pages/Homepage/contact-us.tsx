@@ -1,8 +1,11 @@
 import React from "react";
+
 import CustomButton from "../../components/button";
+
 import { ReactComponent as BigStar } from "../../assets/icons/big-star.svg";
 import { ReactComponent as ContactImg } from "../../assets/images/contact-us.svg";
 import { ReactComponent as ContactImgMobile } from "../../assets/images/contact-us-mobile.svg";
+
 import { Box } from "@mui/material";
 
 const ContactUs: React.FC = () => {

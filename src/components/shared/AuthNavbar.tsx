@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// assets
 import { ReactComponent as Logo } from "../../assets/img/logo.svg";
 
 interface AuthNavbarProps {
