@@ -1,13 +1,15 @@
-import { Formik, Form, Field } from "formik";
 import React from "react";
-import { AuthNavbar } from "../../components";
+import { Formik, Form, Field } from "formik";
 import { Link } from "react-router-dom";
+
+import { AuthNavbar, Button } from "../../components";
+
 import { newPasswordValidation } from "../../utils/schema";
 import { NewPasswordDto } from "../../interfaces";
 import { useAppDispatch } from "../../hooks";
-import axios from "axios";
 import { login } from "../../redux/slices/userSlice";
-import { Button } from "../../components";
+
+import axios from "axios";
 
 const initialValues: NewPasswordDto = {
   cpassword: "",
