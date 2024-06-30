@@ -4,6 +4,7 @@ import Hero from "./hero";
 import Services from "./services";
 import ContactUs from "./contact-us";
 import FAQ from "./faq";
+import Footer from "../../components/footer";
 
 const Homepage: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const Homepage: React.FC = () => {
         <ContactUs />
         <FAQ />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
