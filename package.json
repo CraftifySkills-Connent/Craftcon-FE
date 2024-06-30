@@ -2,6 +2,7 @@
   "name": "craftcon-fe",
   "private": true,
   "version": "0.0.0",
+  "description": "Craftcon brings top-rated professionals to your doorstep. Find reliable plumbers, electricians, cleaners, and handymen near you.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +10,19 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "keywords": [
+    "Craftcon",
+    "professional services",
+    "plumbers",
+    "electricians",
+    "cleaners",
+    "handymen",
+    "home services",
+    "reliable professionals",
+    "local services"
+  ],
+  "author": "Craftcon-Inc",
+  "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
