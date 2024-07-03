@@ -2,9 +2,10 @@ import React from "react";
 
 import { ReactComponent as HeroBanner } from "../../assets/images/banner.svg";
 import { ReactComponent as HeroBannerMobile } from "../../assets/images/banner-mobile.svg";
-import CustomButton from "../../components/button";
+
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
+import { CustomButton } from "../../components";
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();

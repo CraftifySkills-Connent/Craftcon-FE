@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import { ReactComponent as Logo } from "../src/assets/img/logo.svg";
+import { ReactComponent as Logo } from "../src/assets/images/craftcon.svg";
 
 import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";

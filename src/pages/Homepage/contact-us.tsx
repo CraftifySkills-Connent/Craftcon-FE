@@ -1,12 +1,11 @@
 import React from "react";
 
-import CustomButton from "../../components/button";
+import { Box } from "@mui/material";
 
 import { ReactComponent as BigStar } from "../../assets/icons/big-star.svg";
 import { ReactComponent as ContactImg } from "../../assets/images/contact-us.svg";
 import { ReactComponent as ContactImgMobile } from "../../assets/images/contact-us-mobile.svg";
-
-import { Box } from "@mui/material";
+import { CustomButton } from "../../components";
 
 const ContactUs: React.FC = () => {
   return (
@@ -30,6 +29,7 @@ const ContactUs: React.FC = () => {
         <div className="">
           <CustomButton
             variant="contained"
+            type="button"
             onClick={() => console.log("log")}
             buttonText="Contact Us"
             disableElevation

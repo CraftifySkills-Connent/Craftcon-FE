@@ -1,9 +1,9 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import { Link } from "react-router-dom";
 
-import { AuthNavbar, Button } from "../../components";
-import { ReactComponent as Google } from "../../assets/img/google.svg";
+import { AuthNavbar, Button, CustomButton, TextInput } from "../../components";
+import { ReactComponent as Google } from "../../assets/images/google.svg";
 
 import { loginValidation } from "../../utils/schema";
 import { LoginDto } from "../../interfaces";
@@ -47,66 +47,42 @@ const Login: React.FC = () => {
             validationSchema={loginValidation}
             onSubmit={handleSubmit}
           >
-            {({ errors }) => (
+            {() => (
               <Form>
                 <div className="flex flex-col justify-center text-start gap-4">
-                  <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="email"
-                      className="text-[#1C1C1C] font-medium text-sm"
-                    >
-                      Email
-                    </label>
-                    <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
-                      type="email"
-                      name="email"
-                      placeholder="Olivia@gmail.com"
-                    />
-                    {errors.email && (
-                      <span className="text-xs text-red-500">
-                        {errors.email}
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="password"
-                      className="text-[#1C1C1C] text-sm font-medium"
-                    >
-                      Password
-                    </label>
-                    <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
-                      type="password"
-                      name="password"
-                      placeholder="8+ Characters"
-                    />
-                    {errors.password && (
-                      <span className="text-xs text-red-500">
-                        {errors.password}
-                      </span>
-                    )}
-                  </div>
+                  <TextInput
+                    name="email"
+                    label="Email"
+                    type="email"
+                    placeholder="Olivia@gmail.com"
+                    htmlFor="email"
+                  />
+                  <TextInput
+                    htmlFor="password"
+                    label="Password"
+                    type="password"
+                    name="password"
+                    placeholder="8+ Characters"
+                  />
                   <div className="flex justify-end text-[#000000] text-sm font-normal underline">
                     <Link to="/forgotPassword">Forgot password?</Link>
                   </div>
                   <div>
-                    <button
+                    <CustomButton
+                      buttonText="Continue"
+                      variant="contained"
                       type="submit"
                       className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
-                    >
-                      Continue
-                    </button>
+                    />
                   </div>
                   <div>
-                    <button
+                    <CustomButton
+                      buttonText="Continue with Google"
+                      variant="outlined"
                       type="button"
+                      startIcon={<Google />}
                       className="flex flex-row w-full items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
-                    >
-                      <Google />
-                      Continue with Google
-                    </button>
+                    />
                   </div>
                   <p className="flex justify-center text-center font-normal text-sm text-[#666666]">
                     Don't have an account?{" "}

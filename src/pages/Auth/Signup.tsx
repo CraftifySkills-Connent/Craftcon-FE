@@ -1,9 +1,9 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import { Link } from "react-router-dom";
 
-import { AuthNavbar, Button } from "../../components";
-import { ReactComponent as Google } from "../../assets/img/google.svg";
+import { AuthNavbar, Button, CustomButton, TextInput } from "../../components";
+import { ReactComponent as Google } from "../../assets/images/google.svg";
 
 import { signupValidation } from "../../utils/schema";
 import { SignupDto } from "../../interfaces";
@@ -49,101 +49,54 @@ const Signup: React.FC = () => {
             validationSchema={signupValidation}
             onSubmit={handleSubmit}
           >
-            {({ errors }) => (
+            {() => (
               <Form>
                 <div className="flex flex-col justify-center text-start gap-4">
-                  <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="name"
-                      className="text-[#1C1C1C] text-sm font-medium"
-                    >
-                      Full Name
-                    </label>
-                    <Field
-                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
-                      type="text"
-                      name="fullName"
-                      placeholder="Olivia Emmanuell"
-                    />
-                    {errors.fullName && (
-                      <span className="text-xs text-red-500">
-                        {errors.fullName}
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="name"
-                      className="text-[#1C1C1C] font-medium text-sm"
-                    >
-                      Email
-                    </label>
-                    <Field
-                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
-                      type="email"
-                      name="email"
-                      placeholder="Olivia@gmail.com"
-                    />
-                    {errors.email && (
-                      <span className="text-xs text-red-500">
-                        {errors.email}
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="name"
-                      className="text-[#1C1C1C] font-medium text-sm"
-                    >
-                      Password
-                    </label>
-                    <Field
-                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
-                      type="password"
-                      name="password"
-                      placeholder="8+ Charaters"
-                    />
-                    {errors.password && (
-                      <span className="text-xs text-red-500">
-                        {errors.password}
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="name"
-                      className="text-[#1C1C1C] text-sm font-medium"
-                    >
-                      Confirm Password
-                    </label>
-                    <Field
-                      className="outline outline-1 outline-gray-200 w-full px-4 h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder margin-placeholder rounded-md"
-                      type="password"
-                      name="cpassword"
-                      placeholder="8+ Charaters"
-                    />
-                    {errors.cpassword && (
-                      <span className="text-xs text-red-500">
-                        {errors.cpassword}
-                      </span>
-                    )}
-                  </div>
+                  <TextInput
+                    label="Full Name"
+                    name="fullName"
+                    type="text"
+                    htmlFor="name"
+                    placeholder="Olivia Emmanuell"
+                  />
+                  <TextInput
+                    label="Email"
+                    htmlFor="email"
+                    type="email"
+                    name="email"
+                    placeholder="Olivia@gmail.com"
+                  />
+
+                  <TextInput
+                    label="Password"
+                    htmlFor="password"
+                    name="password"
+                    type="password"
+                    placeholder="8+ Charaters"
+                  />
+                  <TextInput
+                    htmlFor="password"
+                    label="Confirm Password"
+                    type="password"
+                    name="cpassword"
+                    placeholder="8+ Charaters"
+                  />
                   <div>
-                    <button
+                    <CustomButton
+                      variant="contained"
+                      buttonText="Submit"
                       type="submit"
                       className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
-                    >
-                      Submit
-                    </button>
+                    />
                   </div>
                   <div>
-                    <button
-                      type="submit"
+                    <CustomButton
+                      buttonText="Continue with Google"
+                      variant="outlined"
+                      type="button"
+                      startIcon={<Google />}
                       className="flex flex-row w-full items-center gap-2 text-center justify-center outline outline-1 font-semibold cursor-pointer text-[#016FED] text-sm bg-[#fff] h-[40px] rounded-md"
-                    >
-                      <Google />
-                      Continue with Google
-                    </button>
+                    />
                   </div>
                   <p className="flex justify-center text-center font-normal text-sm text-[#666666]">
                     Already have an account?{" "}

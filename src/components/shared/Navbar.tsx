@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { ReactComponent as CraftconLogo } from "../../assets/images/craftcon.svg";
 import { Link, useNavigate } from "react-router-dom";
-import CustomButton from "../button";
+
+import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
+import { ReactComponent as CraftconLogo } from "../../assets/images/craftcon.svg";
+import CustomButton from "./CustomButton";
 
 const navItems = [
   { title: "Home", link: "" },
@@ -10,7 +12,11 @@ const navItems = [
   { title: "Professionals", link: "" },
 ];
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  token?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ token }) => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,6 +27,10 @@ const Navbar: React.FC = () => {
   return (
     <div className="fixed top-0 left-0 right-0 flex items-center justify-between px-6 md:px-20 py-5 w-full bg-white z-50">
       <CraftconLogo />
+      <div className="flex items-center gap-[8px] border border-solid border-[#D0D5DD] py-[10px] px-[14px] rounded-[8px] shadow-search-input w-[450px]">
+        <SearchIcon />
+        <input className="w-full" placeholder="Search for categories" />
+      </div>
       <div className="hidden md:flex items-center gap-12">
         {navItems?.map((item) => (
           <div key={item?.title}>
@@ -30,19 +40,23 @@ const Navbar: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="hidden md:flex items-center gap-6">
-        <CustomButton
-          variant="outlined"
-          onClick={() => navigate("/login")}
-          buttonText="Sign in"
-        />
-        <CustomButton
-          variant="contained"
-          onClick={() => navigate("/signup")}
-          disableElevation
-          buttonText="Sign up"
-        />
-      </div>
+      {token ? null : (
+        <div className="hidden md:flex items-center gap-6">
+          <CustomButton
+            type="button"
+            variant="outlined"
+            onClick={() => navigate("/login")}
+            buttonText="Sign in"
+          />
+          <CustomButton
+            type="button"
+            variant="contained"
+            onClick={() => navigate("/signup")}
+            disableElevation
+            buttonText="Sign up"
+          />
+        </div>
+      )}
       <div className="md:hidden flex items-center relative z-50">
         <button onClick={toggleMenu} className="focus:outline-none">
           <div className={`space-y-1 ${isMenuOpen ? "hidden" : ""}`}>
@@ -80,27 +94,31 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex flex-col gap-4 mt-8 w-full px-6">
-              <CustomButton
-                variant="outlined"
-                onClick={() => {
-                  navigate("/login");
-                  setIsMenuOpen(false);
-                }}
-                buttonText="Sign in"
-                className="w-full h-12"
-              />
-              <CustomButton
-                variant="contained"
-                onClick={() => {
-                  navigate("/signup");
-                  setIsMenuOpen(false);
-                }}
-                disableElevation
-                buttonText="Sign up"
-                className="w-full h-12"
-              />
-            </div>
+            {token ? null : (
+              <div className="flex flex-col gap-4 mt-8 w-full px-6">
+                <CustomButton
+                  type="button"
+                  variant="outlined"
+                  onClick={() => {
+                    navigate("/login");
+                    setIsMenuOpen(false);
+                  }}
+                  buttonText="Sign in"
+                  className="w-full h-12"
+                />
+                <CustomButton
+                  type="button"
+                  variant="contained"
+                  onClick={() => {
+                    navigate("/signup");
+                    setIsMenuOpen(false);
+                  }}
+                  disableElevation
+                  buttonText="Sign up"
+                  className="w-full h-12"
+                />
+              </div>
+            )}
           </div>
         </div>
       )}
