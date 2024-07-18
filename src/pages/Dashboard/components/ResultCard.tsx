@@ -22,9 +22,9 @@ const ResultCard: React.FC<{ user: User }> = ({ user }) => {
     <div className="">
       <div className="flex items-start gap-[14px] border-b w-full border-b-[#EAECF0] pb-[2rem]">
         <img
-          src="/src/assets/images/profile-image.svg"
-          alt=""
-          className="md:w-[131px] md:h-[131px] w-[77px] h-[77px] obj-contain"
+          src="https://media.istockphoto.com/id/1773071954/photo/businesswoman-working-on-laptop-at-hotel-cafe.jpg?s=1024x1024&w=is&k=20&c=MZH624jGcy-X5ftk0-5XK8fCq9xOZw4LLT8WdDxe2gQ="
+          alt={`${user?.name} image`}
+          className="md:w-[131px] md:h-[131px] w-[77px] h-[77px] obj-contain rounded-full"
         />
         <div className="flex flex-col gap-[8px] md:gap-[13px]">
           <div className="flex items-center gap-[5px]">

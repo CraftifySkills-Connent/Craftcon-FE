@@ -23,7 +23,7 @@ const FilterBox: React.FC<FilterProps> = ({ className }) => {
         <PriceRange />
         <Reviews />
         <PaymentMethod />
-        <div className="h-[92px] flex items-center justify-center">
+        <div className="hidden h-[92px] md:flex items-center justify-center">
           <Button className="bg-[#016FED] rounded-[5px] py-[8px] px-[12px] text-center w-full text-white font-semibold">
             Apply
           </Button>
