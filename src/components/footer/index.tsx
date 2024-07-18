@@ -11,7 +11,7 @@ const navItems = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="relative mt-[20px] md:mt-[50px] lg:mt-[86px] px-[20px] md:px-[50px] lg:px-[88px] bg-light pt-[20px] md:pt-[30px] lg:pt-[50px] pb-[20px] md:pb-[30px] lg:pb-[50px]">
+    <div className="relative px-[20px] md:px-[50px] lg:px-[88px] bg-light pt-[20px] md:pt-[30px] lg:pt-[50px] pb-[20px] md:pb-[30px] lg:pb-[50px]">
       <div className="grid items-center justify-center pb-[50px] md:pb-[80px] lg:pb-[123px]">
         <div className="flex justify-center">
           <CraftconLogo className="mb-[10px] md:mb-[15px] lg:mb-[20px]" />

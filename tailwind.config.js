@@ -12,11 +12,19 @@ export default {
         ashen: "#D0D0D0",
         default: "#016FED",
       },
+      textColor: {
+        black: "#101828",
+        gray: "#475467",
+      },
       boxShadow: {
         "service-box": "0px 6.79px 19.23px -5.65px rgba(58, 77, 233, 0.15)",
+        "search-input": "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
       },
       backgroundImage: {
         "service-box": "url(/src/assets/images/shadow.svg)",
+      },
+      height: {
+        afterNavHeight: "100vh",
       },
     },
   },

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // assets
-import { ReactComponent as Logo } from "../../assets/img/logo.svg";
+import { ReactComponent as Logo } from "../../assets/images/craftcon.svg";
 
 interface AuthNavbarProps {
   to: string;

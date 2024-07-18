@@ -3,10 +3,13 @@ import { Button, styled } from "@mui/material";
 
 interface ButtonProps {
   variant: "outlined" | "contained" | "text";
-  onClick: () => void;
-  buttonText: string;
+  onClick?: () => void;
+  buttonText?: string;
   disableElevation?: boolean;
   className?: string;
+  type?: "submit" | "button";
+  startIcon?: React.ReactElement;
+  endIcon?: React.ReactElement;
 }
 
 const CustomButton: React.FC<ButtonProps> = (props) => {
@@ -16,15 +19,21 @@ const CustomButton: React.FC<ButtonProps> = (props) => {
     buttonText,
     disableElevation = false,
     className,
+    type = "button",
+    startIcon,
+    endIcon,
   } = props;
   return (
     <StyledButton
+      type={type}
       variant={variant}
       onClick={onClick}
       disableElevation={disableElevation}
       className={className}
     >
+      {startIcon}
       {buttonText}
+      {endIcon}
     </StyledButton>
   );
 };
