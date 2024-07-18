@@ -40,7 +40,7 @@ const CustomButton: React.FC<ButtonProps> = (props) => {
 
 export default CustomButton;
 
-const StyledButton = styled(Button)(({ theme }) => ({
+const StyledButton = styled(Button)(() => ({
   fontFamily: "Inter",
   padding: "8px 12px",
   borderRadius: "8px",
