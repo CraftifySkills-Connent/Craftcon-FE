@@ -4,10 +4,10 @@ import { Button, styled } from "@mui/material";
 interface ButtonProps {
   variant: "outlined" | "contained" | "text";
   onClick?: () => void;
-  buttonText: string;
+  buttonText?: string;
   disableElevation?: boolean;
   className?: string;
-  type: "submit" | "button";
+  type?: "submit" | "button";
   startIcon?: React.ReactElement;
   endIcon?: React.ReactElement;
 }

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import { ReactComponent as CraftconLogo } from "../../assets/images/craftcon.svg";
 import CustomButton from "./CustomButton";
+import { SearchInput } from "..";
 
 const navItems = [
-  { title: "Home", link: "" },
+  { title: "Home", link: "/dashboard" },
   { title: "Services", link: "" },
   { title: "About Us", link: "" },
   { title: "Professionals", link: "" },
@@ -14,9 +13,11 @@ const navItems = [
 
 interface NavbarProps {
   token?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ token }) => {
+const Navbar: React.FC<NavbarProps> = ({ token, value, onChange }) => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -26,11 +27,14 @@ const Navbar: React.FC<NavbarProps> = ({ token }) => {
 
   return (
     <div className="fixed top-0 left-0 right-0 flex items-center justify-between px-6 md:px-20 py-5 w-full bg-white z-50">
-      <CraftconLogo />
-      <div className="flex items-center gap-[8px] border border-solid border-[#D0D5DD] py-[10px] px-[14px] rounded-[8px] shadow-search-input w-[450px]">
-        <SearchIcon />
-        <input className="w-full" placeholder="Search for categories" />
-      </div>
+      <CraftconLogo className="cursor-pointer" onClick={() => navigate("/")} />
+      {token && (
+        <SearchInput
+          value={value}
+          onChange={onChange}
+          className="hidden md:block"
+        />
+      )}
       <div className="hidden md:flex items-center gap-12">
         {navItems?.map((item) => (
           <div key={item?.title}>
