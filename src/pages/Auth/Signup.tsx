@@ -51,7 +51,7 @@ const Signup: React.FC = () => {
           >
             {() => (
               <Form>
-                <div className="flex flex-col justify-center text-start gap-4">
+                <div className="flex flex-col justify-center text-start gap-8">
                   <TextInput
                     label="Full Name"
                     name="fullName"

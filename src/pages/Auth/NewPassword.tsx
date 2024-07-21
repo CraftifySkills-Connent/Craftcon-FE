@@ -47,7 +47,7 @@ const NewPassword: React.FC = () => {
           >
             {({ errors }) => (
               <Form>
-                <div className="flex flex-col justify-center text-start gap-4">
+                <div className="flex flex-col justify-center text-start gap-8">
                   <div className="flex flex-col gap-2">
                     <label
                       htmlFor="name"

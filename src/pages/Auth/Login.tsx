@@ -49,7 +49,7 @@ const Login: React.FC = () => {
           >
             {() => (
               <Form>
-                <div className="flex flex-col justify-center text-start gap-4">
+                <div className="flex flex-col justify-center text-start gap-8">
                   <TextInput
                     name="email"
                     label="Email"
