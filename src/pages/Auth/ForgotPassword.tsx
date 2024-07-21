@@ -59,7 +59,7 @@ const ForgotPassword: React.FC = () => {
                       Email
                     </label>
                     <Field
-                      className="outline outline-1 outline-gray-200 px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
+                      className="outline outline-2 focus:outline-[#016FED] px-4 w-full h-[40px] placeholder:font-normal placeholder:text-sm custom-placeholder rounded-md"
                       type="email"
                       name="email"
                       placeholder="Olivia@gmail.com"
