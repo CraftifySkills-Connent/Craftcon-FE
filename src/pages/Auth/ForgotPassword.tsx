@@ -50,7 +50,7 @@ const ForgotPassword: React.FC = () => {
           >
             {({ errors }) => (
               <Form>
-                <div className="flex flex-col justify-center text-start gap-4 mt-10">
+                <div className="flex flex-col justify-center text-start gap-8 mt-10">
                   <div className="flex flex-col gap-2">
                     <label
                       htmlFor="name"
@@ -71,12 +71,14 @@ const ForgotPassword: React.FC = () => {
                     )}
                   </div>
                   <div>
-                    <button
-                      type="submit"
-                      className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
-                    >
-                      Reset password
-                    </button>
+                    <Link to="/verify-otp">
+                      <button
+                        type="submit"
+                        className="flex text-center items-center justify-center font-semibold w-full text-[#fff] cursor-pointer text-sm bg-[#016FED] h-[40px] rounded-md"
+                      >
+                        Reset password
+                      </button>
+                    </Link>
                   </div>
                   <p className="flex justify-center text-center font-normal text-sm text-[#666666]">
                     Don't have an account?{" "}

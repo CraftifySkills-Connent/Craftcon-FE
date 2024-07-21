@@ -9,6 +9,7 @@ import {
   Dashboard,
 } from "../pages";
 import { ProtectedRoute } from "./protectedRoutes";
+import PasswordOTP from "../pages/Auth/PasswordOTP";
 // import { NotFoundPage } from "../components";
 // import { lazy } from "react";
 
@@ -31,5 +32,6 @@ export const router = createBrowserRouter([
   { path: "/login", element: <Login /> },
   { path: "/forgotPassword", element: <ForgotPassword /> },
   { path: "/newpassword", element: <NewPassword /> },
+  { path: "/verify-otp", element: <PasswordOTP /> },
   ...routesForAuthenticatedOnly,
 ]);
